@@ -1,14 +1,17 @@
+import { DELAY_IN_MS } from "../constants";
 import useDebouncedInput from "../hooks/useDebouncedInput";
-
-const DELAY_IN_MS = 500;
+import "./MyInput.css";
 
 const MyInput = () => {
-
   const { inputValue, debouncedValue, handleChange } =
     useDebouncedInput(DELAY_IN_MS);
   return (
-    <div>
-      <input type="text" value={inputValue} onChange={handleChange} />
+    <div className="container">
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+      />
       <p>Debounced Value: {debouncedValue}</p>
     </div>
   );
