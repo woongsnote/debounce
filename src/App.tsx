@@ -1,11 +1,7 @@
 import MyInput from "./components/MyInput";
 
 function App() {
-  return (
-    <div>
-      <MyInput />
-    </div>
-  );
+  return <MyInput />;
 }
 
 export default App;
