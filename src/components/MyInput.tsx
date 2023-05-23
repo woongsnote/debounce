@@ -1,19 +1,18 @@
-import { DELAY_IN_MS } from "../constants";
-import useDebouncedInput from "../hooks/useDebouncedInput";
-import "./MyInput.css";
+import { ChangeEvent } from "react";
 
-const MyInput = () => {
-  const { inputValue, debouncedValue, handleChange } =
-    useDebouncedInput(DELAY_IN_MS);
+type MyInputProps = {
+  inputValue: string;
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+};
+
+const MyInput = ({ inputValue, handleChange }: MyInputProps) => {
   return (
-    <div className="container">
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleChange}
-      />
-      <p>Debounced Value: {debouncedValue}</p>
-    </div>
+    <input
+      type="text"
+      value={inputValue}
+      onChange={handleChange}
+      data-testid={`my-input`}
+    />
   );
 };
 
