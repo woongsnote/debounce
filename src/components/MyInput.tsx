@@ -1,15 +1,11 @@
-import { ChangeEvent, useState } from "react";
-import { useDebounce } from "../hooks/useDebounce";
+import useDebouncedInput from "../hooks/useDebouncedInput";
 
 const DELAY_IN_MS = 500;
 
 const MyInput = () => {
-    const [inputValue, setInputValue] = useState("");
-    const debouncedValue = useDebounce(inputValue, DELAY_IN_MS);
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setInputValue(event.target.value);
-    };
 
+  const { inputValue, debouncedValue, handleChange } =
+    useDebouncedInput(DELAY_IN_MS);
   return (
     <div>
       <input type="text" value={inputValue} onChange={handleChange} />
