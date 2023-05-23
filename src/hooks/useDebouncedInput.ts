@@ -1,7 +1,7 @@
 import { useState, ChangeEvent } from "react";
 import { useDebounce } from "./useDebounce";
 
-const useDebouncedInput = (delay: number) => {
+export const useDebouncedInput = (delay: number) => {
     const [inputValue, setInputValue] = useState("");
     const debouncedValue = useDebounce(inputValue, delay);
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -11,5 +11,3 @@ const useDebouncedInput = (delay: number) => {
         inputValue, debouncedValue, handleChange
     }
 }
-
-export default useDebouncedInput
