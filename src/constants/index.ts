@@ -1,0 +1,1 @@
+export const DELAY_IN_MS = 500;
