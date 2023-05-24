@@ -49,6 +49,7 @@ The spinner display and search result presentation are provided as example code 
 
 ## Structure
 
+```plain
 📦src
 ┣ 📂components
 ┃ ┣ 📜Container.tsx
@@ -65,6 +66,7 @@ The spinner display and search result presentation are provided as example code 
 ┣ 📜index.tsx
 ┣ 📜react-app-env.d.ts
 ┗ 📜setupTests.ts
+```
 
 ## Contributing
 
