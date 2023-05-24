@@ -1,11 +1,11 @@
 import { ChangeEvent } from "react";
 
-type MyInputProps = {
+type DebouncedInputProps = {
   inputValue: string;
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
-const MyInput = ({ inputValue, handleChange }: MyInputProps) => {
+const DebouncedSearchInput = ({ inputValue, handleChange }: DebouncedInputProps) => {
   return (
     <input
       type="text"
@@ -16,4 +16,4 @@ const MyInput = ({ inputValue, handleChange }: MyInputProps) => {
   );
 };
 
-export default MyInput;
+export default DebouncedSearchInput;

@@ -1,19 +1,19 @@
 import "./App.css";
 import { useDebouncedInput } from "./hooks/useDebouncedInput";
 import { DELAY_IN_MS } from "./constants";
-import MyInput from "./components/MyInput";
-import MyContainer from "./components/MyContainer";
-import MyResult from "./components/MyResult";
+import DebouncedSearchInput from "./components/DebouncedSearchInput";
+import Container from "./components/Container";
+import DebouncedResult from "./components/DebouncedResult";
 
 function App() {
   const { inputValue, debouncedValue, handleChange } =
     useDebouncedInput(DELAY_IN_MS);
 
   return (
-    <MyContainer>
-      <MyInput inputValue={inputValue} handleChange={handleChange} />
-      <MyResult result={debouncedValue} />
-    </MyContainer>
+    <Container>
+      <DebouncedSearchInput inputValue={inputValue} handleChange={handleChange} />
+      <DebouncedResult result={debouncedValue} />
+    </Container>
   );
 }
 
