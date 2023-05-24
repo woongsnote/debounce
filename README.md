@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Make a Debounced Input Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A project that demonstrates the usage of the Debounced Search Input component.
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This project showcases the **implementation** and **usage** of the Debounced Search Input component, which is a React component that provides a debounced search functionality with **a customizable delay**. The component allows users to input search queries and performs a search request only after a specified delay period, reducing unnecessary requests and improving user experience.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Debounced search input with a customizable delay.
+- Display of a spinner to indicate search in progress.
+- Presentation of search results as text.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository.
+2. Install the project dependencies using your preferred package manager:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```shell
+   npm install
+   # or
+   yarn install
+   ```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```shell
+   npm start
+   # or
+   yarn start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Open your browser and visit <http://localhost:3000> to see the application in action.
 
-### `npm run eject`
+## Configuration
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The Debounced Search Input component utilizes the following configurations:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `useDebouncedInput hook`: Manages the input value, debounced value, and change handler for the search functionality.
+- `DELAY_IN_MS constant`: Sets the delay time in milliseconds for the search requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Notes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The debounced search functionality is simulated using setTimeout. In a real-world scenario, the search requests would typically be performed against a server or API.
+The spinner display and search result presentation are provided as example code and can be customized to fit the project's design and requirements.
 
-## Learn More
+## Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📦src
+┣ 📂components
+┃ ┣ 📜Container.tsx
+┃ ┣ 📜DebouncedResult.tsx
+┃ ┗ 📜DebouncedSearchInput.tsx
+┣ 📂constants
+┃ ┗ 📜index.ts
+┣ 📂hooks
+┃ ┣ 📜useDebounce.ts
+┃ ┗ 📜useDebouncedInput.ts
+┣ 📜App.css
+┣ 📜App.test.tsx
+┣ 📜App.tsx
+┣ 📜index.tsx
+┣ 📜react-app-env.d.ts
+┗ 📜setupTests.ts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+This project is licensed under the MIT License.
